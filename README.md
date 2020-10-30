@@ -63,31 +63,43 @@ y estando dentro del directorio, levantar el Docker Compose introduciendo la sig
 ```
 docker-compose up
 ```
-Hay que esperar unos segundos a que se lenvanten todos los servicios especificados en el archivo [docker-compose.yml](https://github.com/IngBotek/daw-project/blob/master/docker-compose.yml). Si es la primera vez que ejecuta `docker-compose up`, hay que esperar a que se descarguen los contenedores de los servicios faltantes. Habiendo finalizado la inicialización de los servicios, abrir el navegador y dirigirse a http://localhost:8000, donde deberia visualizarse una pagina como la siguiente: 
+Hay que esperar unos segundos a que se levanten todos los servicios especificados en el archivo [docker-compose.yml](https://github.com/IngBotek/daw-project/blob/master/docker-compose.yml). Si es la primera vez que ejecuta `docker-compose up`, hay que esperar a que se descarguen los contenedores de los servicios faltantes. Habiendo finalizado la inicialización de los servicios, abrir el navegador y dirigirse a http://localhost:8000, donde debería visualizarse una pagina como la siguiente: 
 
-Agregar camptura de página principal
-
+![Página Index](doc/IndexCaptura.png)
 
 ## Funcionalidad
 
 Se explica a continuación el funcionamiento de la aplicación.
 
-### Página principal
+## Página principal
 
 Dentro de la página principal se visualizan todos los dispositivos registrados como así tambien se destacan todas las acciones que permite la aplicación:
-* Apagar todos los dispositivos
-* Agregar nuevo dispositivos
-* Quitar un dispositivo
+* Apagar todos los dispositivos.
+* Apagar y prender individualmente cada dispositivo.
+* Agregar nuevo dispositivos.
+* Quitar un dispositivo.
 
-Insertar captura de la pagina donde se expliquen sobre ella sus funcionalidades
+![Página Index](doc/CapturaIndex.png)
+
+La página principal contiene la lista de dispositivos registrados, cada uno con un switch que permite cambiar los estados On-Off. También tenemos un botón general para apagar todos los dispositivos al mismo tiempo. En la parte superior derecha tenemos las pestañas que llevan a las otras funcionalidades como: 
+
+* Agregar dispositivos: haciendo click en ésta pestaña se mostrará un formulario el cual requiere completar todos sus campos antes de enviar y registrar un nuevo dispositivo. 
+
+![Formulario](doc/FormularioCaptura.png)
+
+* Quitar dispositivos: haciendo click en ésta pestaña se mostrara la lista de dispositivos ya registrados, cada uno con un botón que permitirá eliminarlos de la lista y la base de datos. 
+
+![Lista de eliminación](doc/EliminarCaptura.png)
+
+Todas redireccionan a la página index principal una vez que se realiza una acción. Las pestañas Apagar dispositivos y Dispositivos llevan a la página principal ya que es allí donde se encuentran. 
 
 ## Maquetado
 Para la implementación de estilos, acciones, botones, switches y formularios de la aplicación se usó [materializecss](https://materializecss.com/), un framework CSS que facilita el uso de estilos y funcionalidades ya sea en un sitio web o aplicación basada en estándares web.
 
 ## Frontend y Backend
-El frontend está compuesto en gran medida por código Typescript y HTML. El compilador de Typescript solicitado en el [docker-compose.yml](https://github.com/IngBotek/daw-project/blob/master/docker-compose.yml) se ocupa de generar automaticamente el archivo javascript para la ejecución de la aplicación. Este código javascript es interpretado por el navegador, muestra la página e interpreta la acciones sobre ella como puente al backend.
+El frontend está compuesto en gran medida por código Typescript y HTML. El compilador de Typescript solicitado en el [docker-compose.yml](https://github.com/IngBotek/daw-project/blob/master/docker-compose.yml) se ocupa de generar automáticamente el archivo javascript para la ejecución de la aplicación. Este código javascript es interpretado por el navegador, muestra la página e interpreta la acciones sobre ella como puente al backend.
 
-El backend está compuesto por una API de [express](https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introduction) corriendo sobre [NodeJS] (https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introduction). Express es el framework web más popular de Node, y es la librería subyacente para un gran número de otros frameworks web de Node. La API se ocupa de atender y responder a todos los request del cliente teniendo acceso a la base de datos MySQL para realizar todos los cambios y modificaciones necesarios. 
+El backend está compuesto por una API de [express](https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introduction) corriendo sobre [NodeJS](https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introduction). Express es el framework web más popular de Node, y es la librería subyacente para un gran número de otros frameworks web de Node. La API se ocupa de atender y responder a todos los request del cliente teniendo acceso a la base de datos MySQL para realizar todos los cambios y modificaciones necesarios. 
 
 ![Diagrama en bloques](doc/DiagramaFrontBack.png)
 
