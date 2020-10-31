@@ -19,11 +19,10 @@ To read all project documentation, please go to its wiki in [this link](https://
 * [Introducción](#Introducción)
 * [Herramientas](#Herramientas)
 * [Requerimientos](#Requerimientos)
-* [Como ejecutar](#Como ejecutar)
+* [Ejecución](#Ejecución)
 * [Funcionalidad](#Funcionalidad)
-  * Página principal
 * [Maquetado](#Maquetado)
-* [Frontend y Backend](#Frontend y Backend)
+* [Estructura](#Estructura)
 * [Finalización](#Finalización)
 
 ## Introducción
@@ -66,10 +65,6 @@ Hay que esperar unos segundos a que se levanten todos los servicios especificado
 
 ## Funcionalidad
 
-Se explica a continuación el funcionamiento de la aplicación.
-
-## Página principal
-
 Dentro de la página principal se visualizan todos los dispositivos registrados como así tambien se destacan todas las acciones que permite la aplicación:
 * Apagar todos los dispositivos.
 * Apagar y prender individualmente cada dispositivo.
@@ -93,7 +88,7 @@ Todas redireccionan a la página index principal una vez que se realiza una acci
 ## Maquetado
 Para la implementación de estilos, acciones, botones, switches y formularios de la aplicación se usó [materializecss](https://materializecss.com/), un framework CSS que facilita el uso de estilos y funcionalidades ya sea en un sitio web o aplicación basada en estándares web.
 
-## Frontend y Backend
+## Estructura
 El frontend está compuesto en gran medida por código Typescript y HTML. El compilador de Typescript solicitado en el [docker-compose.yml](https://github.com/IngBotek/daw-project/blob/master/docker-compose.yml) se ocupa de generar automáticamente el archivo javascript para la ejecución de la aplicación. Este código javascript es interpretado por el navegador, muestra la página e interpreta la acciones sobre ella como puente al backend.
 
 El backend está compuesto por una API de [express](https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introduction) corriendo sobre [NodeJS](https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introduction). Express es el framework web más popular de Node, y es la librería subyacente para un gran número de otros frameworks web de Node. La API se ocupa de atender y responder a todos los request del cliente teniendo acceso a la base de datos MySQL para realizar todos los cambios y modificaciones necesarios. 
