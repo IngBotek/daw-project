@@ -45,7 +45,7 @@ Es altamente recomendable la lectura de la [documentación](https://github.com/c
 
 Para poder correr la aplicación correctamente, es necesario realizar la [instalación y configuración](https://github.com/IngBotek/daw-project/blob/master/doc/Instalaci%C3%B3nDocker.pdf) del Docker y Docker Compose.
 
-## Como ejecutar
+## Ejecución
 
 Habiendo completada la descarga y configuración de las herramientas, debe descargar el contenido de este repositorio, para ello puede posicionarse por linea de comando dentro del directorio donde desea guardar el proyecto y ejecutar la siguiente linea de comando:
 ```
