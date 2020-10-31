@@ -19,11 +19,11 @@ To read all project documentation, please go to its wiki in [this link](https://
 * [Introducción](#Introducción)
 * [Herramientas](#Herramientas)
 * [Requerimientos](#Requerimientos)
-* [Como ejecutar](#Como ejecutar)
+* [Como ejecutar](#Comoejecutar)
 * [Funcionalidad](#Funcionalidad)
-  * [Página principal](#Página principal)
+  * [Página principal](#Páginaprincipal)
 * [Maquetado](#Maquetado)
-* [Frontend y Backend](#Frontend y Backend)
+* [Frontend y Backend](#FrontendyBackend)
 * [Finalización](#Finalización)
 
 ## Introducción
